@@ -16,4 +16,8 @@ class MiscItem
 
     @sell_in -= 1
   end
+
+  def to_s()
+    "#{self.class}, #{@sell_in}, #{@quality}"
+  end
 end

@@ -1,4 +1,4 @@
-class AgedBrie
+class Conjured
 
   attr_accessor :sell_in, :quality
 
@@ -8,15 +8,15 @@ class AgedBrie
   end
 
   def update_quality()
-    @sell_in -= 1
-
-    if @quality < 50 && @sell_in > 0
-      @quality += 1
-    elsif @quality < 49 && @sell_in <= 0
-      @quality += 2
+    if @quality <= 2
+      @quality = 0
+    elsif @sell_in <= 0
+      @quality <= 4 ? @quality = 0 : @quality -= 4
     else
-      @quality = 50
+      @quality -=2
     end
+
+    @sell_in -= 1
   end
 
   def to_s()
