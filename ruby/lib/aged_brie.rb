@@ -18,6 +18,4 @@ class AgedBrie
       @quality = 50
     end
   end
-
-
 end
