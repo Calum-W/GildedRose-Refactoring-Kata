@@ -4,11 +4,11 @@ class DepreciatingItem < Item
 
   def update_quality()
     if @sell_in >= 11
-      @quality += 1 if quality < 50
+      @quality += 1 if quality < MAX_QUALITY
     elsif @sell_in >= 6
-      quality < 49 ? @quality += 2 : @quality = 50
+      quality < MAX_QUALITY - 1 ? @quality += 2 : @quality = 50
     elsif @sell_in > 0
-      quality < 48 ? @quality += 3 : @quality = 50
+      quality < MAX_QUALITY - 2 ? @quality += 3 : @quality = 50
     else
       @quality = 0
     end
