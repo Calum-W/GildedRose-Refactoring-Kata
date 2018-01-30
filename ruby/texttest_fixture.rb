@@ -4,16 +4,16 @@ require File.join(File.dirname(__FILE__), './lib/gilded_rose')
 
 puts "OMGHAI!"
 items = [
-  MiscItem.new(name="+5 Dexterity Vest", sell_in=10, quality=20),
-  MaturingItem.new(name="Aged Brie", sell_in=2, quality=0),
-  MiscItem.new(name="Elixir of the Mongoose", sell_in=5, quality=7),
-  Item.new(name="Sulphuras", sell_in=0, quality=80),
-  Item.new(name="Sulphuras", sell_in=-1, quality=80),
-  BackstagePass.new(sell_in=15, quality=20),
-  BackstagePass.new(sell_in=10, quality=49),
-  BackstagePass.new(sell_in=5, quality=49),
+  MiscItem.new(name: "+5 Dexterity Vest", sell_in: 10, quality: 20),
+  MaturingItem.new(name: "Aged Brie", sell_in: 2, quality: 0),
+  MiscItem.new(name: "Elixir of the Mongoose", sell_in: 5, quality: 7),
+  Item.new(name: "Sulphuras", sell_in: 0, quality: 80),
+  Item.new(name: "Sulphuras", sell_in: -1, quality: 80),
+  DepreciatingItem.new(name: "Backstage passes to a TAFKAL80ETC concert", sell_in: 15, quality: 20),
+  DepreciatingItem.new(name: "Backstage passes to a TAFKAL80ETC concert", sell_in: 10, quality: 49),
+  DepreciatingItem.new(name: "Backstage passes to a TAFKAL80ETC concert", sell_in: 5, quality: 49),
   # This Conjured item does not work properly yet
-  Conjured.new(name="Conjured Mana Cake", sell_in=3, quality=6), # <-- :O
+  ConjuredItem.new(name: "Conjured Mana Cake", sell_in: 3, quality: 6), # <-- :O
 ]
 
 days = 2
