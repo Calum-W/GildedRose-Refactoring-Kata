@@ -85,14 +85,26 @@ describe GildedRose do
           expect(items[0].quality).to eq 50
         end
 
-        it "doesn't increase the value above 50 when sell_in is between 6-10" do
-          items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 8, 50)]
+        it "doesn't increase the value above 50 when sell_in is between 6-10 (min)" do
+          items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 6, 50)]
           GildedRose.new(items).update_quality()
           expect(items[0].quality).to eq 50
         end
 
-        it "doesn't increase the value above 50 when sell_in is between 1-5" do
+        it "doesn't increase the value above 50 when sell_in is between 6-10 (max)" do
+          items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 10, 50)]
+          GildedRose.new(items).update_quality()
+          expect(items[0].quality).to eq 50
+        end
+
+        it "doesn't increase the value above 50 when sell_in is between 1-5 (min)" do
           items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 1, 50)]
+          GildedRose.new(items).update_quality()
+          expect(items[0].quality).to eq 50
+        end
+
+        it "doesn't increase the value above 50 when sell_in is between 1-5 (max)" do
+          items = [Item.new("Backstage passes to a TAFKAL80ETC concert", 5, 50)]
           GildedRose.new(items).update_quality()
           expect(items[0].quality).to eq 50
         end
