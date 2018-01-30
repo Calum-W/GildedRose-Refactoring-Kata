@@ -1,6 +1,6 @@
 require_relative 'Item'
 
-class BackstagePass < Item
+class DepreciatingItem < Item
 
   def update_quality()
     if @sell_in >= 11

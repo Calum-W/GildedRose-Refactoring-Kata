@@ -1,7 +1,6 @@
 require_relative 'item.rb'
-require_relative 'legendary_item.rb'
 require_relative 'maturing_item.rb'
-require_relative 'backstage_pass.rb'
+require_relative 'depreciating_item.rb'
 require_relative 'misc_item.rb'
 require_relative 'conjured_item.rb'
 

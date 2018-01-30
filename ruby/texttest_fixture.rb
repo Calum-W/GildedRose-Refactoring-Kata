@@ -5,10 +5,10 @@ require File.join(File.dirname(__FILE__), './lib/gilded_rose')
 puts "OMGHAI!"
 items = [
   MiscItem.new(name="+5 Dexterity Vest", sell_in=10, quality=20),
-  AgedBrie.new(sell_in=2, quality=0),
+  MaturingItem.new(name="Aged Brie", sell_in=2, quality=0),
   MiscItem.new(name="Elixir of the Mongoose", sell_in=5, quality=7),
-  Sulphuras.new(sell_in=0, quality=80),
-  Sulphuras.new(sell_in=-1, quality=80),
+  Item.new(name="Sulphuras", sell_in=0, quality=80),
+  Item.new(name="Sulphuras", sell_in=-1, quality=80),
   BackstagePass.new(sell_in=15, quality=20),
   BackstagePass.new(sell_in=10, quality=49),
   BackstagePass.new(sell_in=5, quality=49),

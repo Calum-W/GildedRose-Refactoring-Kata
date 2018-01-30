@@ -6,6 +6,9 @@ class Item
     @sell_in = args[:sell_in]
     @quality = args[:quality]
   end
+  
+  def update_quality()
+  end
 
   def to_s()
     "#{@name}, #{@sell_in}, #{@quality}"
