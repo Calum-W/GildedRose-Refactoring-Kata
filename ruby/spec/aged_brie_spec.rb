@@ -35,9 +35,9 @@ describe "Aged Brie" do
   end
 
   describe "#to_s" do
-    it "should return a string containing the item's class, sell_in and quality" do
+    it "should return a string containing the item's name, sell_in and quality" do
       axe = AgedBrie.new(5, 9)
-      expect(axe.to_s).to eq "AgedBrie, 5, 9"
+      expect(axe.to_s).to eq "Aged Brie, 5, 9"
     end
   end
 end

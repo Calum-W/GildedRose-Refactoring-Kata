@@ -1,9 +1,11 @@
-class AgedBrie
+require_relative 'Item'
+
+class AgedBrie < Item
 
   attr_accessor :sell_in, :quality
 
   def initialize(sell_in, quality)
-    @name = "Aged brie"
+    @name = "Aged Brie"
     @sell_in = sell_in
     @quality = quality
   end
@@ -18,9 +20,5 @@ class AgedBrie
     else
       @quality = 50
     end
-  end
-
-  def to_s()
-    "#{self.class}, #{@sell_in}, #{@quality}"
   end
 end

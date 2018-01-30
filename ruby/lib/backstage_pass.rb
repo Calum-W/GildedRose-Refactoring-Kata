@@ -1,4 +1,6 @@
-class BackstagePass
+require_relative 'Item'
+
+class BackstagePass < Item
 
   attr_accessor :sell_in, :quality
 
@@ -20,9 +22,5 @@ class BackstagePass
     end
 
     @sell_in -= 1
-  end
-
-  def to_s()
-    "#{@name}, #{@sell_in}, #{@quality}"
   end
 end

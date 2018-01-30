@@ -78,7 +78,7 @@ describe "Backstage pass" do
   end
 
   describe "#to_s" do
-    it "should return a string containing the item's class, sell_in and quality" do
+    it "should return a string containing the item's name, sell_in and quality" do
       bsp = BackstagePass.new(5, 9)
       expect(bsp.to_s).to eq "Backstage passes to a TAFKAL80ETC concert, 5, 9"
     end

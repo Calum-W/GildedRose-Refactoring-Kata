@@ -42,7 +42,7 @@ describe "Misc item" do
   end
 
   describe "#to_s" do
-    it "should return a string containing the item's class, sell_in and quality" do
+    it "should return a string containing the item's name, sell_in and quality" do
       rubber_duck = MiscItem.new("Delicious pear", 5, 9)
       expect(rubber_duck.to_s).to eq "Delicious pear, 5, 9"
     end

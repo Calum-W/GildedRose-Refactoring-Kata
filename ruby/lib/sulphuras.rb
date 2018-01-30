@@ -1,4 +1,6 @@
-class Sulphuras
+require_relative 'Item'
+
+class Sulphuras < Item
 
   attr_accessor :sell_in, :quality
 
@@ -9,9 +11,5 @@ class Sulphuras
   end
 
   def update_quality()
-  end
-
-  def to_s()
-    "#{@name}, #{@sell_in}, #{@quality}"
   end
 end

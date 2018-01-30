@@ -40,7 +40,7 @@ describe "Conjured" do
   end
 
   describe "#to_s" do
-    it "should return a string containing the item's class, sell_in and quality" do
+    it "should return a string containing the item's name, sell_in and quality" do
       conjured_staff = Conjured.new("Conjured staff", 5, 9)
       expect(conjured_staff.to_s).to eq "Conjured staff, 5, 9"
     end

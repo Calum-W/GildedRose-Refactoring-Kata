@@ -1,4 +1,6 @@
-class MiscItem
+require_relative 'Item'
+
+class MiscItem < Item
 
   attr_accessor :sell_in, :quality
 
@@ -16,9 +18,5 @@ class MiscItem
     end
 
     @sell_in -= 1
-  end
-
-  def to_s()
-    "#{@name}, #{@sell_in}, #{@quality}"
   end
 end

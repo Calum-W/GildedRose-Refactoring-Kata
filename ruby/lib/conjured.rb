@@ -1,4 +1,6 @@
-class Conjured
+require_relative 'Item'
+
+class Conjured < Item
 
   attr_accessor :sell_in, :quality
 
@@ -18,9 +20,5 @@ class Conjured
     end
 
     @sell_in -= 1
-  end
-
-  def to_s()
-    "#{@name}, #{@sell_in}, #{@quality}"
   end
 end
