@@ -1,9 +1,9 @@
 require_relative 'item.rb'
-require_relative 'sulphuras.rb'
-require_relative 'aged_brie.rb'
+require_relative 'legendary_item.rb'
+require_relative 'maturing_item.rb'
 require_relative 'backstage_pass.rb'
 require_relative 'misc_item.rb'
-require_relative 'conjured.rb'
+require_relative 'conjured_item.rb'
 
 class GildedRose
 

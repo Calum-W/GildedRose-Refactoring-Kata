@@ -1,7 +1,7 @@
 require 'misc_item'
 
 describe "Misc item" do
-  describe "Update_quality" do
+  describe "#update_quality" do
     it "reduces the quality by one if sell_in is above 0" do
       item = MiscItem.new(name: "Delicious pear", sell_in: 1, quality: 10)
       item.update_quality()
@@ -38,13 +38,6 @@ describe "Misc item" do
         item.update_quality()
         expect(item.sell_in).to eq 9
       end
-    end
-  end
-
-  describe "#to_s" do
-    it "should return a string containing the item's name, sell_in and quality" do
-      rubber_duck = MiscItem.new(name: "Delicious pear", sell_in: 5, quality: 9)
-      expect(rubber_duck.to_s).to eq "Delicious pear, 5, 9"
     end
   end
 end

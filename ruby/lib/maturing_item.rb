@@ -1,6 +1,6 @@
 require_relative 'Item'
 
-class AgedBrie < Item
+class MaturingItem < Item
 
   def update_quality()
     @sell_in -= 1

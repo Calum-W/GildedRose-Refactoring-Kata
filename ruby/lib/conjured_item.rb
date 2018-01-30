@@ -1,6 +1,6 @@
 require_relative 'Item'
 
-class Conjured < Item
+class ConjuredItem < Item
 
   def update_quality()
     if @quality <= 2
