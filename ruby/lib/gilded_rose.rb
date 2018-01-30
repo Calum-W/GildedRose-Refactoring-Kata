@@ -44,8 +44,8 @@ class GildedRose
         if item.name != "Aged Brie"
           if item.name != "Backstage passes to a TAFKAL80ETC concert"
             if item.quality > 0
-            # Sell-in < 0. If not Brie, BSP or Sulfuras, lose 1 quality
               if item.name != "Sulfuras, Hand of Ragnaros"
+                # Sell-in < 0. If not Brie, BSP or Sulfuras, lose 1 quality
                 item.quality = item.quality - 1
               end
             end
@@ -60,7 +60,6 @@ class GildedRose
           end
         end
       end
-      puts item.quality
     end
   end
 end
