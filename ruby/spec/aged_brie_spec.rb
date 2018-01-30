@@ -14,13 +14,13 @@ describe "Aged Brie" do
       expect(cheese.quality).to eq 12
     end
 
-    it "shouldn't increase Brie's quality if already at 50" do
+    it "doesn't increase Brie's quality if already at 50" do
       cheese = AgedBrie.new(10, 50)
       cheese.update_quality()
       expect(cheese.quality).to eq 50
     end
 
-    it "shouldn't increase Brie's quality if already at 50 and sell_in is 0 or below" do
+    it "doesn't increase Brie's quality if already at 50 and sell_in is 0 or below" do
       cheese = AgedBrie.new(0, 50)
       cheese.update_quality()
       expect(cheese.quality).to eq 50

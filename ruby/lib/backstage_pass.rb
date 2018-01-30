@@ -9,9 +9,9 @@ class BackstagePass
   end
 
   def update_quality()
-    if @sell_in > 11
+    if @sell_in >= 11
       @quality += 1 if quality < 50
-    elsif @sell_in > 6
+    elsif @sell_in >= 6
       quality < 49 ? @quality += 2 : @quality = 50
     elsif @sell_in > 0
       quality < 48 ? @quality += 3 : @quality = 50
@@ -23,6 +23,6 @@ class BackstagePass
   end
 
   def to_s()
-    "#{self.class}, #{@sell_in}, #{@quality}"
+    "#{@name}, #{@sell_in}, #{@quality}"
   end
 end

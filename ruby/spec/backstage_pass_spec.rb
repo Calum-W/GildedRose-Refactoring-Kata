@@ -2,13 +2,31 @@ require 'backstage_pass'
 
 describe "Backstage pass" do
   describe "update_quality" do
-    it "increase quality by two if sell_in is between 6-10" do
+    it "increases quality by one if sell_in is above 10" do
+      bsp = BackstagePass.new(11, 10)
+      bsp.update_quality()
+      expect(bsp.quality).to eq 11
+    end
+
+    it "increases quality by two if sell_in is between 6-10 (max)" do
       bsp = BackstagePass.new(10, 10)
       bsp.update_quality()
       expect(bsp.quality).to eq 12
     end
 
-    it "increase quality by three if sell_in is between 1-5" do
+    it "increases quality by two if sell_in is between 6-10 (min)" do
+      bsp = BackstagePass.new(6, 10)
+      bsp.update_quality()
+      expect(bsp.quality).to eq 12
+    end
+
+    it "increases quality by three if sell_in is between 1-5 (max)" do
+      bsp = BackstagePass.new(5, 10)
+      bsp.update_quality()
+      expect(bsp.quality).to eq 13
+    end
+
+    it "increases quality by three if sell_in is between 1-5 (min)" do
       bsp = BackstagePass.new(1, 10)
       bsp.update_quality()
       expect(bsp.quality).to eq 13
@@ -62,7 +80,7 @@ describe "Backstage pass" do
   describe "#to_s" do
     it "should return a string containing the item's class, sell_in and quality" do
       bsp = BackstagePass.new(5, 9)
-      expect(bsp.to_s).to eq "BackstagePass, 5, 9"
+      expect(bsp.to_s).to eq "Backstage passes to a TAFKAL80ETC concert, 5, 9"
     end
   end
 end
