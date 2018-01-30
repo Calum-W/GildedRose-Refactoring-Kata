@@ -38,4 +38,11 @@ describe "Conjured" do
       expect(conjured_staff.quality).to eq 0
     end
   end
+
+  describe "#to_s" do
+    it "should return a string containing the item's class, sell_in and quality" do
+      conjured_staff = Conjured.new(5, 9)
+      expect(conjured_staff.to_s).to eq "Conjured, 5, 9"
+    end
+  end
 end
