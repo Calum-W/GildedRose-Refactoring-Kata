@@ -3,6 +3,7 @@ class BackstagePass
   attr_accessor :sell_in, :quality
 
   def initialize(sell_in, quality)
+    @name = "Backstage passes to a TAFKAL80ETC concert"
     @sell_in = sell_in
     @quality = quality
   end
