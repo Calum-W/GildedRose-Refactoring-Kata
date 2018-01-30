@@ -15,10 +15,10 @@ class GildedRose
         end
       else
         if item.quality < 50
-          # Brie, BSP and Sulfuras gain 1 quality (max 50)
+          # Brie and BSP gain 1 quality (max 50)
           item.quality = item.quality + 1
 
-          # BSP ains 1 or 2 quality if sell_in is under 11 or 6 (max 50)
+          # BSP gains 1 or 2 quality if sell_in is under 11 or 6 (max 50)
           if item.name == "Backstage passes to a TAFKAL80ETC concert"
             if item.sell_in < 11
               if item.quality < 50
@@ -60,6 +60,7 @@ class GildedRose
           end
         end
       end
+      puts item.quality
     end
   end
 end
