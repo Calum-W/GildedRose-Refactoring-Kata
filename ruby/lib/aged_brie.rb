@@ -2,14 +2,6 @@ require_relative 'Item'
 
 class AgedBrie < Item
 
-  attr_accessor :sell_in, :quality
-
-  def initialize(sell_in, quality)
-    @name = "Aged Brie"
-    @sell_in = sell_in
-    @quality = quality
-  end
-
   def update_quality()
     @sell_in -= 1
 

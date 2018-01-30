@@ -2,14 +2,6 @@ require_relative 'Item'
 
 class BackstagePass < Item
 
-  attr_accessor :sell_in, :quality
-
-  def initialize(sell_in, quality)
-    @name = "Backstage passes to a TAFKAL80ETC concert"
-    @sell_in = sell_in
-    @quality = quality
-  end
-
   def update_quality()
     if @sell_in >= 11
       @quality += 1 if quality < 50
