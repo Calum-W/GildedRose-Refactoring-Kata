@@ -3,7 +3,6 @@ require 'maturing_item'
 describe "Maturing item" do
   describe "#update_quality" do
     max = Item::MAX_QUALITY
-    min = Item::MIN_QUALITY
 
     it "increases Brie's quality by one if sell_in is above 0" do
       cheese = MaturingItem.new(name: "Aged Brie", sell_in: 10, quality: 10)
