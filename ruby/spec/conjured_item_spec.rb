@@ -1,7 +1,6 @@
 require 'conjured_item'
 
 describe "Conjured item" do
-  max = Item::MAX_QUALITY
   min = Item::MIN_QUALITY
 
   describe "#update_quality" do
@@ -38,7 +37,7 @@ describe "Conjured item" do
     end
 
     it "reduces sell_in by one" do
-      staff = ConjuredItem.new("Conjured staff", 10, max)
+      staff = ConjuredItem.new("Conjured staff", 10, 10)
       expect { staff.update_quality() }.to change { staff.sell_in }.by(-1)
     end
   end
