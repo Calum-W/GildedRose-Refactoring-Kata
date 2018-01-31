@@ -2,15 +2,12 @@ require_relative 'Item'
 
 class ConjuredItem < Item
 
-  def update_quality()
-    if @quality <= MIN_QUALITY + 2
-      @quality = 0
-    elsif @sell_in <= 0
-      @quality <= MIN_QUALITY + 4 ? @quality = 0 : @quality -= 4
-    else
-      @quality -=2
+  def update_quality
+    if @quality > 0
+      @quality -= (@sell_in > 0 ? 2 : 4)
     end
 
+    @quality = 0 if @quality < 0
     @sell_in -= 1
   end
 end
