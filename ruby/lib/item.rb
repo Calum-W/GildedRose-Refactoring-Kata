@@ -4,10 +4,10 @@ class Item
   MAX_QUALITY = 50
   MIN_QUALITY = 0
 
-  def initialize(args)
-    @name = args[:name]
-    @sell_in = args[:sell_in]
-    @quality = args[:quality]
+  def initialize(name, sell_in, quality)
+    @name = name
+    @sell_in = sell_in
+    @quality = quality
   end
 
   def update_quality()
