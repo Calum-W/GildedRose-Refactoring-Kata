@@ -1,4 +1,4 @@
-Bank Tech Test
+Gilded Rose Tech Test
 ===============
 
 This repo was created as a practice tech test in week 10 of Makers' Academy.
@@ -28,13 +28,13 @@ To begin, I spent some time reading through the update_quality method, and visua
 
 Before refactoring the code, I began writing tests categorised by the type of item. Only after I believed I had covered all edge cases did I begin changing the code itself.
 
-I created one class at a time, replicating the tests in a new file then writing code to match. Once all of my classes were working I changed GildedRose's update_quality method to use polymorphism.
+I created one class at a time, replicating the tests in a new file then writing code to match. Once all of my classes were passing their tests I changed GildedRose's update_quality method to use polymorphism.
 
 After doing this, I continued to refactor by making changes which had now become more apparent. Each type of item could inherit their initialize and to_s methods from the Item class, and the Legendary class (created for Sulphuras) was no longer necessary.
 
-Despite the instructions that the Item class should not be altered, I decided to risk the ogre's wrath by making two small additions to the code. An empty update_quality method, which allowed me to remove the Legendary class, and a MIN/MAX_QUALITY constant, which had no effect on the code but would make future changes easier to implement.
+Despite the instructions that the Item class should not be altered, I decided to risk the ogre's wrath by making two small additions to the code. An empty update_quality method, which allowed me to remove the Legendary class (as it followed the parent class logic), and a MIN/MAX_QUALITY constant, which had no effect on the code but would make future changes easier to implement.
 
-Given more freedom to change the Item class, I would also have added the following the method, and called it at the end of each subclass item's update_quality method:
+Given more freedom to change the Item class, I would also have added the following method, and called it at the end of each subclass item's update_quality method:
 
 @sell_in -= 1
 @quality = MIN_QUALITY if @quality < MIN_QUALITY
